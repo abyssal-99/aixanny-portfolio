@@ -34,3 +34,5 @@ public/assets/*.mov
 public/assets/*.avi
 public/assets/*.mkv
 public/assets/*.webm
+
+.vercel

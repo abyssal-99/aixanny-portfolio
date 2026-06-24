@@ -271,9 +271,9 @@ function EditableText({ as: Tag = 'span', storageKey, children, editMode, classN
   const readStyle = () => {
     try {
       const saved = window.localStorage.getItem(`tom-portfolio-style:${storageKey}`);
-      return saved ? JSON.parse(saved) : { x: 0, y: 0, size: null };
+      return saved ? JSON.parse(saved) : editorDefaults.style?.[storageKey] || { x: 0, y: 0, size: null };
     } catch {
-      return { x: 0, y: 0, size: null };
+      return editorDefaults.style?.[storageKey] || { x: 0, y: 0, size: null };
     }
   };
   const [text, setText] = useState(() => {
@@ -414,9 +414,9 @@ function EditableHeroTitle({ editMode }) {
   const [layout, setLayout] = useState(() => {
     try {
       const saved = window.localStorage.getItem('tom-portfolio-style:hero-title-layout');
-      return saved ? JSON.parse(saved) : { x: 0, y: 0, size: null };
+      return saved ? JSON.parse(saved) : editorDefaults.style?.['hero-title-layout'] || { x: 0, y: 0, size: null };
     } catch {
-      return { x: 0, y: 0, size: null };
+      return editorDefaults.style?.['hero-title-layout'] || { x: 0, y: 0, size: null };
     }
   });
 

@@ -1771,13 +1771,21 @@ video {
 
   .works-track {
     display: grid;
+    gap: 18px;
     width: auto;
     transform: none !important;
+    transition: none;
+    will-change: auto;
   }
 
   .work-panel {
     width: 100%;
-    height: 72vh;
+    height: auto;
+    min-height: 260px;
+    aspect-ratio: 16 / 10;
+    opacity: 1;
+    transform: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
   }
 
   .work-panel:nth-child(4) {
@@ -1791,8 +1799,83 @@ video {
   }
 
   .panel-caption {
-    left: 22px;
-    right: 22px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: none;
+  }
+
+  .work-panel:nth-child(3) .panel-caption {
+    top: auto;
+    bottom: 20px;
+  }
+
+  .work-panel button {
+    border-color: rgba(244, 240, 232, 0.16);
+    box-shadow: none;
+    transform: none;
+  }
+
+  .work-panel-focus button {
+    border-color: rgba(244, 240, 232, 0.18);
+    box-shadow: none;
+  }
+
+  .work-panel button::after,
+  .work-panel:nth-child(2n) button::after {
+    background: linear-gradient(180deg, rgba(11, 11, 12, 0.03) 0%, rgba(11, 11, 12, 0.1) 44%, rgba(11, 11, 12, 0.78) 100%);
+  }
+
+  .work-panel img,
+  .work-panel button:hover img {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .kinetic-line {
+    opacity: 0.12;
+    transform: none;
+    mix-blend-mode: screen;
+  }
+
+  .panel-number {
+    left: 18px;
+    top: 16px;
+    transform: none;
+  }
+
+  .panel-caption p {
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+  }
+
+  .panel-caption h3 {
+    font-size: clamp(29px, 8.2vw, 42px);
+    line-height: 1.08;
+  }
+
+  .panel-caption small {
+    max-width: 100%;
+    margin-top: 9px;
+    font-size: 13px;
+    line-height: 1.48;
+    opacity: 1;
+    transform: none;
+  }
+
+  .view-label,
+  .work-panel button:hover .view-label {
+    right: 18px;
+    bottom: 15px;
+    font-size: 10px;
+    opacity: 0.78;
+    transform: none;
+  }
+
+  #works [data-reveal] {
+    filter: none;
   }
 
   .project-overlay {
