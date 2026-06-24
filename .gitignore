@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# production build output
+dist/
+
+# local development and generated scratch files
+tmp/
+.agents/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment and secrets
+.env
+.env.*
+!.env.example
+
+# Vercel local project settings
+.vercel/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# large source media; host production videos on object storage/CDN instead
+public/assets/*.mp4
+public/assets/*.mov
+public/assets/*.avi
+public/assets/*.mkv
+public/assets/*.webm

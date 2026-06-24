@@ -1,0 +1,13 @@
+node_modules/
+.pnpm-store/
+tmp/
+.agents/
+.git/
+.env
+.env.*
+
+public/assets/*.mp4
+public/assets/*.mov
+public/assets/*.avi
+public/assets/*.mkv
+public/assets/*.webm
