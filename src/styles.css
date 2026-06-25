@@ -1716,11 +1716,38 @@ video {
   }
 
   .hero-copy {
+    width: 100%;
     padding-bottom: 0;
   }
 
   .hero-title-frame h1 {
-    font-size: 48px;
+    font-size: clamp(44px, 13.2vw, 58px);
+    line-height: 1.04;
+  }
+
+  .hero-title-frame,
+  .hero-title-frame h1 > .editable-box,
+  .hero-title-frame .hero-title-line,
+  .hero-copy > .editable-box {
+    transform: none !important;
+  }
+
+  .hero-title-frame .hero-title-line {
+    font-size: inherit !important;
+  }
+
+  .hero-copy .eyebrow {
+    display: block;
+    max-width: 100%;
+    font-size: 12px !important;
+    line-height: 1.5;
+  }
+
+  .hero-statement {
+    max-width: 30rem;
+    margin-top: 22px;
+    font-size: 15px !important;
+    line-height: 1.72;
   }
 
   .enter-archive {
